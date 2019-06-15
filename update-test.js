@@ -5,8 +5,8 @@ const WooCommerceAPI = require("woocommerce-api");
 // WooCommerce Starts Here
 var WooCommerce = new WooCommerceAPI({
   url: "https://www.loginsvc.com",
-  consumerKey: "ck_301d4de52b4f641020ca845edf3bb576af9b4eec",
-  consumerSecret: "cs_083a60f5158a576deacf1b749f46ba18cb2b17b0",
+  consumerKey: "",
+  consumerSecret: "",
   wpAPI: true,
   version: "wc/v3",
   queryStringAuth: true // Force Basic Authentication as query string true and using under HTTPS
@@ -15,7 +15,7 @@ var WooCommerce = new WooCommerceAPI({
 axios
   .post("https://www.loginsvc.com/wp-json/jwt-auth/v1/token", {
     username: "Daniel",
-    password: "Fre3b@ndz"
+    password: ""
   })
   .then(function(response) {
     token = response.data.token;
